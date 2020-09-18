@@ -66,22 +66,22 @@ function Signup () {
         .catch(err => console.log(err.response));
       }
 
-      const validateChange = e => {
-          yup
-          .reach(signUpSchema, e.target.name)
-          .validate(e.target.value)
-          .then(valid => {
-              setErrors({
-                  ...errors,
-                  [e.target.name]: ""
-              });
-          })
-          .catch(err => {
-              setErrors({
-                  ...errors
-                  [e.target.name]: err.errors[0]
-              });
+      const validateChange = event => {
+        yup
+        .reach(signUpSchema, event.target.name)
+        .validate(event.target.value)
+        .then(valid => {
+          setErrors({
+            ...errors,
+            [event.target.name]: ""
           });
+        })
+        .catch(err => {
+          setErrors({
+            ...errors,
+            [event.target.name]: err.errors[0]
+          });
+        });
       };
 
       return (
@@ -114,9 +114,9 @@ function Signup () {
               <label htmlFor='password'>
                   <input
                     onChange={handleChange}
-                    type="text"
-                    name="email"
-                    value={signUpState.email}
+                    type="password"
+                    name="password"
+                    value={signUpState.password}
                     placeholder="Password"
                   />
                   {errors.password.length > 0 ? (<p className='error'>{errors.password}</p>) : null}
