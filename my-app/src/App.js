@@ -12,11 +12,13 @@ function App() {
       <div>
         <Link to='/'>Home</Link>
         <Link to='/signup'>Sign Up</Link>
+        <Link to='/register'>Login</Link>
         <Link to='/protected'>Listings</Link>
       </div>
       <Switch>
         <Route exact path="/protected" component={Listings} />
-        <Route exact path="/" component={Login} />
+        <Route exact path="/register" component={Login} />
+        <Route exact path="/signup" component={Signup}/>
         <Route component={Login} />
       </Switch>
     </div>

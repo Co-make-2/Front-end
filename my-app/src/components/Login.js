@@ -32,10 +32,10 @@ function Login () {
         e.persist();
         const newLoginData = {
             ...loginState,
-            [e.target.name]
+            [e.target.name]: ""
         };
         validateChange(e);
-        setSignUpState(newLoginData);
+        setLoginState(newLoginData);
     };
 
     const handleSubmit = e => {
@@ -59,7 +59,7 @@ function Login () {
       .validate(event.target.value)
       .then(valid => {
         setLoginErrors({
-          ...errors,
+          ...loginErrors,
           [event.target.name]: ""
         });
       })
@@ -72,7 +72,6 @@ function Login () {
     };
 
 
-const Login = () => {
     return (
         <form onSubmit={handleSubmit}>
             <label htmlFor='name'>
