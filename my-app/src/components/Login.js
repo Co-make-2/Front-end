@@ -74,6 +74,8 @@ function Login () {
 
 
     return (
+    <div>
+        <h4>Login</h4>
         <form onSubmit={handleLoginSubmit}>
             <label htmlFor='name'>
                 <input
@@ -103,6 +105,7 @@ function Login () {
               <pre>{JSON.stringify(newLogin, null, 2)}</pre>
               <button type="submit" disabled={loginButtonDisabled}>Log in</button>
         </form>
+    </div>
     );
 }
 

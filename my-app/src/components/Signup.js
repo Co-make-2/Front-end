@@ -85,6 +85,8 @@ function Signup () {
       };
 
       return (
+        <div>
+          <h4>Create a new account</h4>
           <form onSubmit={handleSubmit}>
 
               <label htmlFor='name'>
@@ -136,6 +138,7 @@ function Signup () {
               <pre>{JSON.stringify(newSignUp, null, 2)}</pre>
               <button type="submit" disabled={buttonDisabled}>Sign Up</button>
           </form>
+        </div>
       );
 }
 
