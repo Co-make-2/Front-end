@@ -51,7 +51,7 @@ function Signup () {
 
       const handleSubmit = e => {
           e.preventDefault();
-          axios.post("https://reqres.in/api/users", signUpState)
+          axios.post("https://comake-app.herokuapp.com/api/register", signUpState)
           .then(res => {console.log("At least were getting sign up data back lol", newSignUp)
           setNewSignUp(res.data);
           console.log("Another check that this is passing sign up data through", newSignUp)
@@ -85,6 +85,8 @@ function Signup () {
       };
 
       return (
+        <div>
+          <h4>Create a new account</h4>
           <form onSubmit={handleSubmit}>
 
               <label htmlFor='name'>
@@ -136,6 +138,7 @@ function Signup () {
               <pre>{JSON.stringify(newSignUp, null, 2)}</pre>
               <button type="submit" disabled={buttonDisabled}>Sign Up</button>
           </form>
+        </div>
       );
 }
 
