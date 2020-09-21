@@ -20,25 +20,26 @@ function Login () {
 
     const [newLogin, setNewLogin] = React.useState([]);
 
-    const [buttonDisabled, setButtonDisabled] = useState(true);  
+    const [loginButtonDisabled, setLoginButtonDisabled] = useState(true);  
 
     useEffect(() => {
         loginSchema.isValid(loginState).then(valid => {
-          setButtonDisabled(!valid);
+          setLoginButtonDisabled(!valid);
         });
       }, [loginState]);
 
-      const handleChange = e => {
+      const handleLoginChange = e => {
         e.persist();
         const newLoginData = {
             ...loginState,
-            [e.target.name]: ""
+            [e.target.name]: 
+            e.target.type === "checkbox" ? e.target.checked : e.target.value
         };
-        validateChange(e);
+        validateLoginChange(e);
         setLoginState(newLoginData);
     };
 
-    const handleSubmit = e => {
+    const handleLoginSubmit = e => {
         e.preventDefault();
         axios.post("https://reqres.in/api/users", loginState)
         .then(res => {console.log("getting log in data back", newLogin)
@@ -53,7 +54,7 @@ function Login () {
       .catch(err => console.log(err.response));
     }
 
-    const validateChange = event => {
+    const validateLoginChange = event => {
       yup
       .reach(loginSchema, event.target.name)
       .validate(event.target.value)
@@ -73,10 +74,10 @@ function Login () {
 
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleLoginSubmit}>
             <label htmlFor='name'>
                 <input
-                    onChange={handleChange}
+                    onChange={handleLoginChange}
                     type="text"
                     name="name"
                     value={loginState.name}
@@ -88,7 +89,7 @@ function Login () {
 
             <label htmlFor='password'>
                   <input
-                    onChange={handleChange}
+                    onChange={handleLoginChange}
                     type="password"
                     name="password"
                     value={loginState.password}
@@ -100,7 +101,7 @@ function Login () {
 
                 {/* the line below is for testing if the data is passing through correctly  */}
               <pre>{JSON.stringify(newLogin, null, 2)}</pre>
-              <button type="submit" disabled={buttonDisabled}>Log in</button>
+              <button type="submit" disabled={loginButtonDisabled}>Log in</button>
         </form>
     );
 }
