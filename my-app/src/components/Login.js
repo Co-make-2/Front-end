@@ -33,7 +33,7 @@ function Login () {
         const newLoginData = {
             ...loginState,
             [e.target.name]: 
-            e.target.type === "checkbox" ? e.target.checked : e.target.value
+            e.target.value
         };
         validateLoginChange(e);
         setLoginState(newLoginData);
