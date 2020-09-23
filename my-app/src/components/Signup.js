@@ -29,7 +29,7 @@ function Signup () {
         //terms: "",
     });
 
-    const [newSignUp, setNewSignUp] = React.useState([]);
+    //const [newSignUp, setNewSignUp] = React.useState([]);
 
     //const [buttonDisabled, setButtonDisabled] = useState(true);
 
@@ -54,7 +54,7 @@ function Signup () {
       const handleSubmit = e => {
           e.preventDefault();
           axios.post("https://comake-app.herokuapp.com/api/register", signUpState)
-          .then(res => {console.log("User signed up!", newSignUp);
+          .then(res => {console.log("User signed up!", signUpState);
           push('/protected');
           //setNewSignUp(res.data);
           //setSignUpState({
