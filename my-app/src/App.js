@@ -10,11 +10,11 @@ function App() {
   return (
     <div className="App">
       <div>
-      <nav class="level">
-        <Link class="level-item has-text-centered" to='/'>Home</Link>
-        <Link class="level-item has-text-centered" to='/signup'>Sign Up</Link>
-        <Link class="level-item has-text-centered" to='/register'>Login</Link>
-        <Link class="level-item has-text-centered" to='/protected'>Listings</Link>
+      <nav className="level">
+        <Link className="level-item has-text-centered" to='/'>Home</Link>
+        <Link className="level-item has-text-centered" to='/signup'>Sign Up</Link>
+        <Link className="level-item has-text-centered" to='/register'>Login</Link>
+        <Link className="level-item has-text-centered" to='/protected'>Listings</Link>
       </nav>
       </div>
       <Switch>
