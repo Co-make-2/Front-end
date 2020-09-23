@@ -68,9 +68,10 @@ function Login(props) {
   };
 
   return (
-    <div className="container is-fluid">
-      <h4 className="title">Login</h4>
+    <div className="container is-fluid" style={{ padding: '50px' }}>
+      
       <div className="container has-text-centered box" style={{ maxWidth: '300px' }}>
+      <h4 className="title">Login</h4>
       <form onSubmit={handleLoginSubmit}>
         <label className="label" htmlFor='username'>
           <input
