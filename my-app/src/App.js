@@ -10,10 +10,12 @@ function App() {
   return (
     <div className="App">
       <div>
-        <Link to='/'>Home</Link>
-        <Link to='/signup'>Sign Up</Link>
-        <Link to='/register'>Login</Link>
-        <Link to='/protected'>Listings</Link>
+      <nav class="level">
+        <Link class="level-item has-text-centered" to='/'>Home</Link>
+        <Link class="level-item has-text-centered" to='/signup'>Sign Up</Link>
+        <Link class="level-item has-text-centered" to='/register'>Login</Link>
+        <Link class="level-item has-text-centered" to='/protected'>Listings</Link>
+      </nav>
       </div>
       <Switch>
         <Route exact path="/protected" component={Listings} />
