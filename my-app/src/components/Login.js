@@ -42,11 +42,11 @@ function Login(props) {
     axios
       .post("https://comake-app.herokuapp.com/api/login", loginState)
       .then(res => {
-        localStorage.setItem("token", res.data.token);
+        window.localStorage.setItem("token", res.data.token);
         props.history.push('/protected');
-        console.log("token info", res.data.token);
+        //console.log("token info", res);
       })
-      .catch(err => console.log(err.response));
+      .catch(err => console.log(err));
   }
 
   const validateLoginChange = event => {
