@@ -10,12 +10,24 @@ function App() {
   return (
     <div className="App">
       <div>
-      <nav className="level">
-        <Link className="level-item has-text-centered" to='/'>Home</Link>
-        <Link className="level-item has-text-centered" to='/signup'>Sign Up</Link>
-        <Link className="level-item has-text-centered" to='/register'>Login</Link>
-        <Link className="level-item has-text-centered" to='/protected'>Listings</Link>
-      </nav>
+        <section className="hero is-danger is-bold">
+          <div className="hero-body">
+            <div className="container">
+            <h1 className="title">
+          Co-Make
+        </h1>
+        <h2 className="subtitle">
+          Making our Communities Thrive
+        </h2>
+              <nav className="level">
+                <Link className="level-item has-text-centered is-family-monospace" to='/'>Home</Link>
+                <Link className="level-item has-text-centered is-family-monospace" to='/signup'>Sign Up</Link>
+                <Link className="level-item has-text-centered is-family-monospace" to='/register'>Login</Link>
+                <Link className="level-item has-text-centered is-family-monospace" to='/protected'>Listings</Link>
+              </nav>
+            </div>
+          </div>
+        </section>
       </div>
       <Switch>
         <Route exact path="/protected" component={Listings} />

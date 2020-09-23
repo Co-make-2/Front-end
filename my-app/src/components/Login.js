@@ -68,11 +68,12 @@ function Login(props) {
   };
 
   return (
-    <div className="container is-fluid">
+    <div className="container is-fluid" style={{ padding: '50px' }}>
+      
+      <div className="container has-text-centered box" style={{ maxWidth: '300px' }}>
       <h4 className="title">Login</h4>
-      <div className="columns">
       <form onSubmit={handleLoginSubmit}>
-        <label htmlFor='username'>
+        <label className="label" htmlFor='username'>
           <input
             className="input is-rounded"
             onChange={handleLoginChange}
@@ -84,7 +85,7 @@ function Login(props) {
           {loginErrors.username.length > 0 ? <p className='error'>{loginErrors.username}</p> : null}
         </label>
         
-        <label htmlFor='password'>
+        <label className="label" htmlFor='password'>
           <input 
             className="input is-rounded"
             onChange={handleLoginChange}
@@ -100,7 +101,7 @@ function Login(props) {
 
         {/* the line below is for testing if the data is passing through correctly  */}
         {/* <pre>{JSON.stringify(newLogin, null, 2)}</pre> */}
-        <button className="button is-light" type="submit" disabled={loginButtonDisabled}>Log in</button>
+        <button className="button is-medium is-danger is-fullwidth" type="submit" disabled={loginButtonDisabled}>Log in</button>
       </form> </div>
     </div>
   );
