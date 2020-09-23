@@ -89,9 +89,10 @@ function Signup () {
       return (
         <div className="container is-fluid">
           <h4 className="title">Create a new account</h4>
+          <div className="container has-text-centered box" style={{ maxWidth: '300px' }}>
           <form onSubmit={handleSubmit}>
 
-              <label htmlFor='username'>
+              <label className="label" htmlFor='username'>
                 <input
                     className="input is-rounded"
                     onChange={handleChange}
@@ -116,7 +117,7 @@ function Signup () {
                 {errors.email.length > 0 ? (<p data-cy="email-error-msg" className='error'>{errors.email}</p>) : null}
               </label> */}
 
-              <label htmlFor='password'>
+              <label className="label" htmlFor='password'>
                   <input
                     className="input is-rounded"
                     onChange={handleChange}
@@ -141,8 +142,8 @@ function Signup () {
                 {/* the line below is for testing if the data is passing through correctly  */}
               {/* <pre>{JSON.stringify(newSignUp, null, 2)}</pre> */}
               {/* <button type="submit" disabled={buttonDisabled}>Sign Up</button> */}
-              <button className="button is-light" type="submit" >Sign Up</button>
-          </form>
+              <button className="button is-medium is-danger is-fullwidth" type="submit" >Sign Up</button>
+          </form></div>
         </div>
       );
 }
