@@ -38,7 +38,8 @@ const pushListing = (e) => {
 };
 
     return(
-        <div>
+        <div className="container is-fluid" style={{ padding: '50px' }}>
+            <div className="container has-text-centered box" style={{ maxWidth: '500px' }}>
             <h2>add a listing</h2>
             <form onSubmit={pushListing}>
                 <label>
@@ -108,7 +109,7 @@ const pushListing = (e) => {
                     />
                 </label>
                 <button>Add Listing</button>
-            </form>
+            </form></div>
         </div>
     )
 }
