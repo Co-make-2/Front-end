@@ -87,13 +87,13 @@ function Signup () {
       };
 
       return (
-        <div class="container is-fluid">
-          <h4 class="title">Create a new account</h4>
+        <div className="container is-fluid">
+          <h4 className="title">Create a new account</h4>
           <form onSubmit={handleSubmit}>
 
               <label htmlFor='username'>
                 <input
-                    class="input is-rounded"
+                    className="input is-rounded"
                     onChange={handleChange}
                     type="text"
                     name="username"
@@ -118,7 +118,7 @@ function Signup () {
 
               <label htmlFor='password'>
                   <input
-                    class="input is-rounded"
+                    className="input is-rounded"
                     onChange={handleChange}
                     type="password"
                     name="password"
@@ -141,7 +141,7 @@ function Signup () {
                 {/* the line below is for testing if the data is passing through correctly  */}
               {/* <pre>{JSON.stringify(newSignUp, null, 2)}</pre> */}
               {/* <button type="submit" disabled={buttonDisabled}>Sign Up</button> */}
-              <button class="button" type="submit" >Sign Up</button>
+              <button className="button is-light" type="submit" >Sign Up</button>
           </form>
         </div>
       );

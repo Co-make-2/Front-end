@@ -68,12 +68,13 @@ function Login(props) {
   };
 
   return (
-    <div class="container is-fluid">
-      <h4 class="title">Login</h4>
+    <div className="container is-fluid">
+      <h4 className="title">Login</h4>
+      <div className="columns">
       <form onSubmit={handleLoginSubmit}>
         <label htmlFor='username'>
           <input
-            class="input is-rounded"
+            className="input is-rounded"
             onChange={handleLoginChange}
             type="text"
             name="username"
@@ -85,7 +86,7 @@ function Login(props) {
         
         <label htmlFor='password'>
           <input 
-            class="input is-rounded"
+            className="input is-rounded"
             onChange={handleLoginChange}
             type="password"
             name="password"
@@ -95,12 +96,12 @@ function Login(props) {
           
           {loginErrors.password.length > 0 ? (<p className='error'>{loginErrors.password}</p>) : null}
         </label>
-        
+       
 
         {/* the line below is for testing if the data is passing through correctly  */}
         {/* <pre>{JSON.stringify(newLogin, null, 2)}</pre> */}
-        <button class="button" type="submit" disabled={loginButtonDisabled}>Log in</button>
-      </form>
+        <button className="button is-light" type="submit" disabled={loginButtonDisabled}>Log in</button>
+      </form> </div>
     </div>
   );
 }
