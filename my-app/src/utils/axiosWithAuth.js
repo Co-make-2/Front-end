@@ -4,9 +4,9 @@ export const axiosWithAuth = () => {
   const token = localStorage.getItem("token");
 
   return axios.create({
-    baseURL: "htpps://comake-app.herokuapp.com",
+    baseURL: "https://comake-app.herokuapp.com",
     headers: {
-      Authorization: token
+      authorization: token
     }
   });
 };
