@@ -38,12 +38,14 @@ const pushListing = (e) => {
 };
 
     return(
-        <div>
-            <h2>add a listing</h2>
+        <div className="container is-fluid" style={{ padding: '50px' }}>
+            <div className="container has-text-centered box" style={{ maxWidth: '700px' }}>
+            <h4 className="title">Add a listing</h4>
             <form onSubmit={pushListing}>
-                <label>
-                    Listing Title
+                <label className="label" htmlFor='title'>
+                    <h4 className="subtitle has-text-left">Listing Title</h4>
                     <input
+                        className="input"
                         type="text"
                         id="listingsName"
                         name="listingsName"
@@ -52,9 +54,10 @@ const pushListing = (e) => {
                         value={listingForm.listingsName}
                     />
                 </label>
-                <label>
-                    Listing Description
+                <label className="label" htmlFor='description'>
+                <h4 className="subtitle has-text-left">Listing Description</h4>
                     <input
+                        className="input"
                         type="text"
                         id="description"
                         name="description"
@@ -63,9 +66,10 @@ const pushListing = (e) => {
                         value={listingForm.description}
                     />
                 </label>
-                <label>
-                    Location
+                <label className="label" htmlFor="location">
+                <h4 className="subtitle has-text-left">Location</h4>
                     <input
+                        className="input"
                         type="text"
                         id="location"
                         name="location"
@@ -74,9 +78,10 @@ const pushListing = (e) => {
                         value={listingForm.location}
                     />
                 </label>
-                <label>
-                    City
+                <label className="label has-text-left" htmlFor="city">
+                <h4 className="subtitle">City</h4>
                     <input
+                        className="input"
                         type="text"
                         id="city"
                         name="city"
@@ -85,9 +90,10 @@ const pushListing = (e) => {
                         value={listingForm.city}
                     />
                 </label>
-                <label>
-                    State
+                <label className="label">
+                <h4 className="subtitle has-text-left">State</h4>
                     <input
+                        className="input"
                         type="text"
                         id="state"
                         name="state"
@@ -97,8 +103,9 @@ const pushListing = (e) => {
                     />
                 </label>
                 <label>
-                    Zip code
+                <h4 className="subtitle has-text-left">Zip code</h4>
                     <input
+                        className="input"
                         type="text"
                         id="zipCode"
                         name="zipCode"
@@ -107,8 +114,9 @@ const pushListing = (e) => {
                         value={listingForm.zipCode}
                     />
                 </label>
-                <button>Add Listing</button>
-            </form>
+                
+                <button className="button is-medium is-primary is-fullwidth" type="submit" style={{ padding: '20px' }}>Add Listing</button>
+            </form></div>
         </div>
     )
 }
