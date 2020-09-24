@@ -101,7 +101,7 @@ function Login(props) {
 
         {/* the line below is for testing if the data is passing through correctly  */}
         {/* <pre>{JSON.stringify(newLogin, null, 2)}</pre> */}
-        <button className="button is-medium is-danger is-fullwidth" type="submit" disabled={loginButtonDisabled}>Log in</button>
+        <button className="button is-medium is-primary is-fullwidth" type="submit" disabled={loginButtonDisabled}>Log in</button>
       </form> </div>
     </div>
   );

@@ -143,7 +143,7 @@ function Signup () {
                 {/* the line below is for testing if the data is passing through correctly  */}
               {/* <pre>{JSON.stringify(newSignUp, null, 2)}</pre> */}
               {/* <button type="submit" disabled={buttonDisabled}>Sign Up</button> */}
-              <button className="button is-medium is-danger is-fullwidth" type="submit" >Sign Up</button>
+              <button className="button is-medium is-primary is-fullwidth" type="submit" >Sign Up</button>
           </form></div>
         </div>
       );

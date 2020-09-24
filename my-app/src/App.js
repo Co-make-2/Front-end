@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <section className="hero is-danger is-bold">
+        <section className="hero is-primary is-bold">
           <div className="hero-body">
             <div className="container">
             <h1 className="title">
