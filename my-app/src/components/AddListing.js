@@ -114,6 +114,7 @@ const pushListing = (e) => {
                         value={listingForm.zipCode}
                     />
                 </label>
+                
                 <button className="button is-medium is-primary is-fullwidth" type="submit" style={{ padding: '20px' }}>Add Listing</button>
             </form></div>
         </div>
