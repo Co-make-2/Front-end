@@ -3,8 +3,11 @@ import './App.css';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Listings from './components/Listings';
+import UserProfile from './components/UserProfile';
+import UpdateProfile from './components/UpdateProfile';
 
 import {Route, Switch, Link} from 'react-router-dom';
+
 
 function App() {
   return (
@@ -24,6 +27,7 @@ function App() {
                 <Link className="level-item has-text-centered is-family-monospace" to='/signup'>Sign Up</Link>
                 <Link className="level-item has-text-centered is-family-monospace" to='/login'>Login</Link>
                 <Link className="level-item has-text-centered is-family-monospace" to='/protected'>Listings</Link>
+                <Link className="level-item has-text-centered is-family-monospace" to='/user-profile/:id'>User Profile</Link>
               </nav>
             </div>
           </div>
@@ -31,8 +35,10 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/protected" component={Listings} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/signup" component={Signup}/>
+        <Route exact path="/user-profile/:id" component={UserProfile}/>
+        <Route exact path="/update-profile/:id" component={UpdateProfile}/>
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup}/>
         <Route component={Login} />
       </Switch>
     </div>
