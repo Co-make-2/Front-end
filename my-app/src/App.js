@@ -22,7 +22,7 @@ function App() {
               <nav className="level">
                 <Link className="level-item has-text-centered is-family-monospace" to='/'>Home</Link>
                 <Link className="level-item has-text-centered is-family-monospace" to='/signup'>Sign Up</Link>
-                <Link className="level-item has-text-centered is-family-monospace" to='/register'>Login</Link>
+                <Link className="level-item has-text-centered is-family-monospace" to='/login'>Login</Link>
                 <Link className="level-item has-text-centered is-family-monospace" to='/protected'>Listings</Link>
               </nav>
             </div>
@@ -31,7 +31,7 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/protected" component={Listings} />
-        <Route exact path="/register" component={Login} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup}/>
         <Route component={Login} />
       </Switch>

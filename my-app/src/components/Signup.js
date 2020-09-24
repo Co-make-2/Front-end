@@ -16,29 +16,26 @@ function Signup () {
 
     const [signUpState, setSignUpState] = useState({
         username: "",
+        password: ""
         //email: "",
-        password: "",
-        //terms: "",
-
+        //terms: ""
     });
 
     const [errors, setErrors] = useState({
         username: "",
+        password: ""
         //email: "",
-        password: "",
-        //terms: "",
+        //terms: ""
     });
 
     //const [newSignUp, setNewSignUp] = React.useState([]);
-
     //const [buttonDisabled, setButtonDisabled] = useState(true);
 
-    useEffect(() => {
-        // signUpSchema.isValid(signUpState).then(valid => {
-        //   setButtonDisabled(!valid);
-        // });
-      }, [signUpState]);
-
+    // useEffect(() => {
+    //     // signUpSchema.isValid(signUpState).then(valid => {
+    //     //   setButtonDisabled(!valid);
+    //     // });
+    //   }, [signUpState]);
 
       const handleChange = e => {
           e.persist();
@@ -53,19 +50,13 @@ function Signup () {
 
       const handleSubmit = e => {
           e.preventDefault();
-          axios.post("https://comake-app.herokuapp.com/api/register", signUpState)
-          .then(res => {console.log("User signed up!", signUpState);
-          push('/protected');
-          //setNewSignUp(res.data);
-          //setSignUpState({
-            //username: "",
-            //email: "",
-            //password: "",
-            //terms: "",
-            //})
-            ;
-          })
-            .catch(err => console.log(err.response));    
+          console.log(signUpState);
+          axios
+          .post("https://comake-app.herokuapp.com/api/register", signUpState)
+          .then(res => {console.log("User signed up!");
+          //push('/protected');
+          push('/login')})
+          .catch(err => console.log(err));    
       }
 
       const validateChange = event => {
@@ -92,7 +83,6 @@ function Signup () {
           <div className="container has-text-centered box" style={{ maxWidth: '300px' }}>
           <h4 className="title">Sign up</h4>
           <form onSubmit={handleSubmit}>
-
               <label className="label" htmlFor='username'>
                 <input
                     className="input is-rounded"
@@ -102,9 +92,7 @@ function Signup () {
                     value={signUpState.username}
                     placeholder="Username"
                 />
-
                 {errors.username.length > 0 ? <p className='error'>{errors.username}</p> : null}
-
               </label>
 
               {/* <label htmlFor='email'>
