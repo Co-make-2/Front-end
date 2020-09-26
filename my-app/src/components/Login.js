@@ -43,8 +43,10 @@ function Login(props) {
       .post("https://comake-app.herokuapp.com/api/login", loginState)
       .then(res => {
         window.localStorage.setItem("token", res.data.token);
+        window.localStorage.setItem("userId", res.data.userId);
+        props.setId(res.data.userId);
         props.history.push('/protected');
-        //console.log("token info", res);
+        console.log("response", res, res.body);
       })
       .catch(err => console.log(err));
   }
