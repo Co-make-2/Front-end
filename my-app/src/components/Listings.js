@@ -29,6 +29,7 @@ const Listings = () => {
             <h2>Listings!</h2>
             {listings.map(item => (
                 <ListingCard listing={item} key={item.id}/>
+                //VOTE BUTTON
             ))}
         </div>
 
