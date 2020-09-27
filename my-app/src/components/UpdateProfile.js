@@ -74,13 +74,15 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div>
-      <h2>Updating Profile</h2>
-      <p>user id {id}</p>
+    <div className="container is-fluid" style={{ padding: '50px' }}>
+      <div className="container has-text-centered box" style={{ maxWidth: '300px' }}>
+      <h4 className="title">Updating Profile</h4>
+      <p className="subtitley">User id {id}</p>
       <form onSubmit={updateUser}>
-        <label>
-            Name
+        <label className="label" htmlFor='Name'>
+            <h4 className="subtitle has-text-left">Name</h4>
             <input 
+            className="input"
             type= "text"
             id= "name"
             name= "name"
@@ -89,9 +91,10 @@ const UpdateProfile = () => {
             value= {item.userProfile[0].name}
             />
         </label>
-        <label>
-            City
+        <label className="label" htmlFor='City'>
+        <h4 className="subtitle has-text-left">City</h4>
             <input 
+            className="input"
             type= "text"
             id= "city"
             name= "city"
@@ -100,9 +103,10 @@ const UpdateProfile = () => {
             value= {item.userProfile[0].city}
             />
         </label>
-        <label>
-            State
+        <label className="label" htmlFor='State'>
+        <h4 className="subtitle has-text-left">State</h4>
             <input 
+            className="input"
             type= "text"
             id= "state"
             name= "state"
@@ -111,9 +115,10 @@ const UpdateProfile = () => {
             value= {item.userProfile[0].state}
             />
         </label>
-        <label>
-            Zip Code
+        <label className="label" htmlFor='Zipcode'>
+        <h4 className="subtitle has-text-left">Zip Code</h4>
             <input 
+            className="input"
             type= "text"
             id= "zipCode"
             name= "zipCode"
@@ -122,9 +127,10 @@ const UpdateProfile = () => {
             value= {item.userProfile[0].zipCode}
             />
         </label>
-        <label>
-            Skills
+        <label className="label" htmlFor='Skills'>
+        <h4 className="subtitle has-text-left">Skills</h4>
             <input 
+            className="input"
             type= "text"
             id= "skills"
             name= "skills"
@@ -133,9 +139,9 @@ const UpdateProfile = () => {
             value= {item.userProfile[0].skills}
             />
         </label>
-        <button>Update Profile</button>
+        <button className="button is-medium is-primary is-fullwidth" type="submit">Update Profile</button>
       </form>
-    </div>
+    </div></div>
   );
 };
 

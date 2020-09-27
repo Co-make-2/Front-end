@@ -61,7 +61,7 @@ const UserProfile = () => {
   return (
     <div>
       
-      <h2>User Profile</h2>
+      <h2 className="title">User Profile</h2>
       {console.log("userData:", userData)}
       {console.log("userData.userProfile", userData.userProfile)}
       {userData.userProfile.map((item) => (
@@ -70,7 +70,7 @@ const UserProfile = () => {
       
       <button onClick={() => push(`/update-profile`)}>Edit Profile</button>
 
-      <h2>User Listings</h2>
+      <h2 className="title">User Listings</h2>
       {userData.userListings.map((item) => (
         <ListingCard listing={item} key={item.listingsId} />
       ))}
